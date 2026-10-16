@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <!-- Path to your Valheim game installation -->
+    <ValheimPath>C:\Games\Steam\steamapps\common\Valheim</ValheimPath>
+    <ValheimManaged>$(ValheimPath)\valheim_Data\Managed</ValheimManaged>
+
+    <!-- Gale Mod Manager profile to deploy to -->
+    <GaleProfile>AB mod dev</GaleProfile>
+    <GaleProfilesPath>$(AppData)\com.kesomannen.gale\valheim\profiles</GaleProfilesPath>
+    <GaleProfilePlugins>$(GaleProfilesPath)\$(GaleProfile)\BepInEx\plugins</GaleProfilePlugins>
+    <BepInExCore>$(GaleProfilesPath)\$(GaleProfile)\BepInEx\core</BepInExCore>
+
+    <!-- Suppress assembly version conflicts caused by Unity's customized framework assemblies -->
+    <NoWarn>$(NoWarn);MSB3277</NoWarn>
+  </PropertyGroup>
+</Project>
